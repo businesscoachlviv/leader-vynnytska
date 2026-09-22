@@ -3,7 +3,7 @@
 const TWEAK_DEFAULTS = window.__TWEAK_DEFAULTS || {
   accentColor: "#FF6600",
   heroBackdrop: "photo",
-  ctaLabel: "Реєструйся · 490 грн"
+  ctaLabel: "Реєструйся · 880 грн"
 };
 
 function applyAccent(hex) {
@@ -29,7 +29,7 @@ function applyHeroBackdrop(mode) {
     bg.style.background = '#000';
     bg.style.opacity = '1';
   } else {
-    bg.style.backgroundImage = 'url("assets/hero-bg.jpg")';
+    bg.style.backgroundImage = 'url("hero-bg.jpg")';
     bg.style.backgroundSize = 'cover';
     bg.style.backgroundPosition = '75% center';
     bg.style.opacity = '1';

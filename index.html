@@ -12,7 +12,32 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
-<style>.hero-bg{background-image:url("hero-bg.jpg") !important;}</style>
+<style>
+  .hero{min-height:auto !important;padding:96px 0 72px !important;background:#000 !important;}
+  .hero-bg{display:none !important;}
+  .topbar .logo img{height:64px !important;}
+  @media (min-width:768px){.topbar .logo img{height:84px !important;}}
+  .hero-inner{position:relative;z-index:2;}
+  .hero-text{display:block;text-align:left;max-width:none;}
+  .hero-portrait{
+    position:relative;margin:34px 0 0;padding:10px;width:min(360px,72vw);
+    border:1px solid rgba(255,255,255,0.16);
+    background:linear-gradient(180deg,rgba(255,102,0,0.10),rgba(255,255,255,0.02));
+    box-shadow:0 40px 110px rgba(255,102,0,0.14);
+  }
+  .hero-portrait::after{content:"";position:absolute;left:-1px;right:-1px;bottom:-1px;height:3px;background:var(--orange,#FF6600);}
+  .hero-portrait img{display:block;width:100%;height:auto;}
+  .hero-portrait-cap{
+    margin-top:14px;text-align:center;color:rgba(255,255,255,0.72);
+    font-size:13px;letter-spacing:0.16em;text-transform:uppercase;
+  }
+  .hero-portrait-cap strong{display:block;margin-top:4px;color:var(--orange,#FF6600);font-weight:900;font-size:17px;letter-spacing:0.06em;}
+  @media (min-width:980px){
+    .hero{padding:120px 0 100px !important;}
+    .hero-inner{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,0.75fr);gap:64px;align-items:center;}
+    .hero-portrait{margin:0;width:100%;max-width:400px;justify-self:end;}
+  }
+</style>
 
 <!-- ============================================
      FACEBOOK PIXEL (Meta Pixel) · ID 892749903784140
@@ -71,6 +96,10 @@ fbq('track', 'PageView');
         <span class="seats">Живий ефір · місця обмежені</span>
       </div>
     </div>
+    <figure class="hero-portrait">
+      <img src="hero-bg.jpg" alt="Оксана Винницька, бізнес-коуч" />
+      <figcaption class="hero-portrait-cap">Бізнес-коуч <strong>Оксана Винницька</strong></figcaption>
+    </figure>
   </div>
 
   <div class="scroll-cue">scroll</div>
