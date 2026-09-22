@@ -1,0 +1,195 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": []
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Instrument Serif|DM Sans|JetBrains Mono))/i]",
+        "message": "Font not provided by the design system. Available: Instrument Serif, DM Sans, JetBrains Mono."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--border",
+      "--border-ink",
+      "--border-strong",
+      "--clay",
+      "--clay-deep",
+      "--clay-tint",
+      "--danger",
+      "--dur",
+      "--dur-fast",
+      "--dur-slow",
+      "--ease-in-out",
+      "--ease-out",
+      "--font-mono",
+      "--font-sans",
+      "--font-serif",
+      "--fs-base",
+      "--fs-display",
+      "--fs-eyebrow",
+      "--fs-h1",
+      "--fs-h2",
+      "--fs-h3",
+      "--fs-h4",
+      "--fs-lg",
+      "--fs-sm",
+      "--fs-xs",
+      "--gold",
+      "--gold-tint",
+      "--hairline",
+      "--hairline-2",
+      "--info",
+      "--ink",
+      "--ink-2",
+      "--ink-3",
+      "--ink-4",
+      "--lh-loose",
+      "--lh-normal",
+      "--lh-snug",
+      "--lh-tight",
+      "--on-ink",
+      "--paper",
+      "--paper-2",
+      "--paper-3",
+      "--r-lg",
+      "--r-md",
+      "--r-pill",
+      "--r-sm",
+      "--r-xl",
+      "--r-xs",
+      "--sage",
+      "--sage-tint",
+      "--shadow-1",
+      "--shadow-2",
+      "--shadow-3",
+      "--shadow-inset",
+      "--space-1",
+      "--space-10",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-7",
+      "--space-8",
+      "--space-9",
+      "--success",
+      "--surface",
+      "--surface-card",
+      "--surface-ink",
+      "--warning"
+    ],
+    "tokenKinds": {
+      "--paper": "color",
+      "--paper-2": "color",
+      "--paper-3": "color",
+      "--ink": "color",
+      "--ink-2": "color",
+      "--ink-3": "color",
+      "--ink-4": "color",
+      "--clay": "color",
+      "--clay-deep": "color",
+      "--clay-tint": "color",
+      "--sage": "color",
+      "--sage-tint": "color",
+      "--gold": "color",
+      "--gold-tint": "color",
+      "--success": "color",
+      "--warning": "color",
+      "--danger": "color",
+      "--info": "color",
+      "--surface": "color",
+      "--surface-card": "color",
+      "--surface-ink": "color",
+      "--on-ink": "color",
+      "--hairline": "color",
+      "--hairline-2": "color",
+      "--font-serif": "font",
+      "--font-sans": "font",
+      "--font-mono": "font",
+      "--fs-display": "spacing",
+      "--fs-h1": "spacing",
+      "--fs-h2": "spacing",
+      "--fs-h3": "spacing",
+      "--fs-h4": "spacing",
+      "--fs-lg": "spacing",
+      "--fs-base": "spacing",
+      "--fs-sm": "spacing",
+      "--fs-xs": "spacing",
+      "--fs-eyebrow": "spacing",
+      "--lh-tight": "other",
+      "--lh-snug": "other",
+      "--lh-normal": "other",
+      "--lh-loose": "other",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-7": "spacing",
+      "--space-8": "spacing",
+      "--space-9": "spacing",
+      "--space-10": "spacing",
+      "--r-xs": "spacing",
+      "--r-sm": "spacing",
+      "--r-md": "spacing",
+      "--r-lg": "spacing",
+      "--r-xl": "spacing",
+      "--r-pill": "spacing",
+      "--border": "color",
+      "--border-strong": "other",
+      "--border-ink": "color",
+      "--shadow-1": "shadow",
+      "--shadow-2": "shadow",
+      "--shadow-3": "shadow",
+      "--shadow-inset": "shadow",
+      "--ease-out": "other",
+      "--ease-in-out": "other",
+      "--dur-fast": "other",
+      "--dur": "other",
+      "--dur-slow": "other"
+    },
+    "fontFamilies": [
+      "DM Sans",
+      "Instrument Serif",
+      "JetBrains Mono"
+    ]
+  }
+}

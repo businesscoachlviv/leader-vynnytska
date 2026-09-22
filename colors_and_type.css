@@ -1,0 +1,199 @@
+/* ============================================================
+   BUSINESS COACH — Colors & Type
+   Editorial, warm, professional. Serif display + clean grotesque.
+   ============================================================ */
+
+/* Web fonts ------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+:root {
+  /* ---- Color: Paper / Ink ---- */
+  --paper:        #F4EFE6;   /* primary surface, warm cream */
+  --paper-2:      #EBE4D6;   /* sunk panel / quote block */
+  --paper-3:      #DFD6C2;   /* divider, hairline accent */
+  --ink:          #11161D;   /* primary text, near-black blue */
+  --ink-2:        #2A3340;   /* secondary text */
+  --ink-3:        #5C6675;   /* tertiary / labels */
+  --ink-4:        #97A0AC;   /* muted, placeholders */
+
+  /* ---- Color: Accent system ---- */
+  --clay:         #C44A2A;   /* primary brand accent — burnt sienna */
+  --clay-deep:    #9C3A20;   /* hover / pressed clay */
+  --clay-tint:    #F3D9CC;   /* clay wash */
+  --sage:         #5A6B54;   /* secondary accent — calm green */
+  --sage-tint:    #D6DCCF;
+  --gold:         #B58A3C;   /* tertiary — for badges, highlights */
+  --gold-tint:    #ECDDB8;
+
+  /* ---- Color: Semantic ---- */
+  --success:      #4F7A47;
+  --warning:      #B58A3C;
+  --danger:       #B23A2A;
+  --info:         #2A3340;
+
+  /* ---- Color: Surfaces ---- */
+  --surface:      var(--paper);
+  --surface-card: #FBF8F1;   /* slightly lighter than paper, on cream bg */
+  --surface-ink:  var(--ink); /* inverted surface */
+  --on-ink:       #F4EFE6;
+  --hairline:     rgba(17, 22, 29, 0.10);
+  --hairline-2:   rgba(17, 22, 29, 0.06);
+
+  /* ---- Type families ---- */
+  --font-serif:   "Instrument Serif", "Georgia", "Times New Roman", serif;
+  --font-sans:    "DM Sans", "Söhne", "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* ---- Type scale (display serif uses tight leading + slight optical tweak) ---- */
+  --fs-display:   88px;   /* 1 big editorial moment per surface */
+  --fs-h1:        56px;
+  --fs-h2:        40px;
+  --fs-h3:        28px;
+  --fs-h4:        22px;
+  --fs-lg:        18px;
+  --fs-base:      16px;
+  --fs-sm:        14px;
+  --fs-xs:        12px;
+  --fs-eyebrow:   11px;   /* uppercase label */
+
+  --lh-tight:     1.04;
+  --lh-snug:      1.18;
+  --lh-normal:    1.45;
+  --lh-loose:     1.6;
+
+  /* ---- Spacing scale (8pt base, with 4 for fine work) ---- */
+  --space-1:      4px;
+  --space-2:      8px;
+  --space-3:      12px;
+  --space-4:      16px;
+  --space-5:      24px;
+  --space-6:      32px;
+  --space-7:      48px;
+  --space-8:      64px;
+  --space-9:      96px;
+  --space-10:     128px;
+
+  /* ---- Radii — restrained, editorial. No pill-everything. ---- */
+  --r-xs:         2px;
+  --r-sm:         4px;
+  --r-md:         8px;
+  --r-lg:         14px;
+  --r-xl:         22px;
+  --r-pill:       999px;
+
+  /* ---- Borders ---- */
+  --border:       1px solid var(--hairline);
+  --border-strong:1px solid rgba(17, 22, 29, 0.18);
+  --border-ink:   1px solid var(--ink);
+
+  /* ---- Shadows — soft, low, warm ---- */
+  --shadow-1:     0 1px 0 rgba(17,22,29,0.04), 0 1px 2px rgba(17,22,29,0.04);
+  --shadow-2:     0 2px 4px rgba(17,22,29,0.05), 0 8px 20px -8px rgba(17,22,29,0.10);
+  --shadow-3:     0 12px 32px -12px rgba(17,22,29,0.18), 0 2px 6px rgba(17,22,29,0.05);
+  --shadow-inset: inset 0 0 0 1px rgba(17,22,29,0.06);
+
+  /* ---- Motion ---- */
+  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);     /* expo-out, signature */
+  --ease-in-out:  cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:     140ms;
+  --dur:          240ms;
+  --dur-slow:     480ms;
+}
+
+/* ============================================================
+   Semantic type — drop-in classes
+   ============================================================ */
+.bc-display {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--fs-display);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.bc-display em { font-style: italic; color: var(--clay); }
+
+.bc-h1 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.bc-h2 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-snug);
+  letter-spacing: -0.005em;
+  color: var(--ink);
+}
+.bc-h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--fs-h3);
+  line-height: var(--lh-snug);
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.bc-h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--fs-h4);
+  line-height: var(--lh-snug);
+  letter-spacing: -0.005em;
+  color: var(--ink);
+}
+.bc-lead {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-lg);
+  line-height: var(--lh-loose);
+  color: var(--ink-2);
+}
+.bc-body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  color: var(--ink-2);
+}
+.bc-small {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-normal);
+  color: var(--ink-3);
+}
+.bc-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--fs-eyebrow);
+  line-height: 1;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.bc-mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  letter-spacing: -0.01em;
+  color: var(--ink-2);
+}
+.bc-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-snug);
+  color: var(--ink);
+}
+
+/* convenience reset for cards ----------- */
+.bc-surface {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
