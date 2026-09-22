@@ -3,7 +3,7 @@
 const TWEAK_DEFAULTS = window.__TWEAK_DEFAULTS || {
   accentColor: "#FF6600",
   heroBackdrop: "photo",
-  ctaLabel: "Реєструйся · 880 грн"
+  ctaLabel: "Реєструйся · 490 грн"
 };
 
 function applyAccent(hex) {
